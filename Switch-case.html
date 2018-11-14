@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h3>Month</h3>
+<input id="num" type="number" name="Month" min="1" max="12" placeholder="nhap thang">
+<input type="button" value="Submit" onclick="Month()">
+<script>
+    var x;
+    function Month() {
+        x = document.getElementById("num").value;
+        switch (x) {
+            case '1':
+            case '3':
+            case '5':
+            case '7':
+            case '8':
+            case '10':
+            case '12':
+                document.write('tháng' + ' ' + x + ' ' + 'có 31 ngày');
+                break;
+            case '4':
+            case '6':
+            case '9':
+            case '11':
+                document.write('tháng' + ' ' + x + ' ' + 'có 30 ngày');
+                break;
+            case '2':
+                document.write('tháng' + ' ' + x + ' ' + 'có 28 hoặc 29 ngày');
+                break;
+
+        }
+    }
+
+
+
+</script>
+</body>
+</html>
