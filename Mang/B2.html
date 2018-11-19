@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var x = prompt("Enter number: ");
+    var y = x.toString();
+    var result = [y[0]];
+
+    for( var z = 1; z < y.length; z++)
+    {
+        if ((y[z - 1] % 2 === 0) && (y[z] % 2 === 0)){
+            result.push('-', y[z]);
+        }
+        else {
+            result.push(y[z]);
+        }
+    }
+    document.write(result.join('   '));
+</script>
+
+</body>
+</html>
