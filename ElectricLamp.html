@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function ElectricLamp() {
+
+        this.turnOn = function () {
+            alert('Turn on!');
+        };
+
+        this.turnOff = function () {
+            alert('Turn off!');
+        }
+        
+    }
+    function SwitchButton() {
+
+
+        this.connectToLamp = function () {
+             if (this.status){
+                 return this.switchOn;
+             }
+             else{
+                 return this.switchOff;
+             }
+
+        };
+        this.switchOn = function () {
+
+            this.status = true;
+
+        };
+        this.switchOff = function () {
+
+            this.status = false;
+
+        };
+        
+    }
+    SwitchButton.prototype = new  ElectricLamp();
+    var switchbutton = new SwitchButton();
+
+    switchbutton.connectToLamp();
+    for (var i = 0; i < 5 ; i++){
+        switchbutton.turnOn();
+        document.write('Turn on!'  + "<br/>");
+        switchbutton.turnOff();
+        document.write('Turn off!'  + "<br/>");
+
+    }
+
+
+
+
+</script>
+</body>
+</html>
