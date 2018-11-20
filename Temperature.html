@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Temperature(C) {
+        this.C = C;
+
+        this.changeTemperatureToF = function () {
+            return((9* this.C)/5 + 32);
+        };
+        this.changeTemperatureToK = function () {
+            return(this.C +  273.15);
+
+        }
+
+    }
+    var temperature = new Temperature(25);
+    document.write('Chuyển sang độ F: ' + temperature.changeTemperatureToF() + "<br/>");
+    document.write('Chuyển sang độ K: ' + temperature.changeTemperatureToK());
+</script>
+</body>
+</html>
