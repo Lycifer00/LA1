@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var x = parseInt(prompt('Nhập điểm ktra'));
+    var y = parseInt(prompt('Nhập điể giữa kì'));
+    var z = parseInt(prompt('Nhập diểm cuối kì'));
+    var dtb = (x + y*2 + z*3)/6;
+    if (6 <= dtb < 8){
+        document.write('Học sinh khá!');
+    }
+    else if (dtb >= 8){
+        document.write('Học sinh giỏi');
+    }
+    else {
+        document.write('Học sinh trung bình!');
+    }
+</script>
+</body>
+</html>
