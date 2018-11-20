@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Mouse(name1, weight1, speed1) {
+        this.name1 = name1;
+        this.weight1 = weight1;
+        this.speed1 = speed1;
+        this.check = function () {
+            if (this.status){
+                alert('Alive!');
+            }
+            else {
+                alert('Dead!');
+            }
+
+        };
+        this.shout = function () {
+            document.write("Chit Chit !!!");
+
+        };
+        this.alive = function () {
+            this.status = true;
+        };
+        this.dead = function () {
+            this.status = false;
+
+        };
+
+
+    }
+    function Cat(name2, weight2, speed2) {
+        this.name2 = name2;
+        this.weight2 = weight2;
+        this.speed2 = speed2;
+        this.shout = function () {
+            document.write("Meooooooo!!!")
+
+        };
+        this.catchMouse = function () {
+            if (this.status){
+                alert('Bắt được một con chuột!');
+            }
+            else{
+                alert('Fail!')
+            }
+            
+        };
+        this.eatMouse = function () {
+
+            if (this.alive) {
+                return (this.weight2 + this.weight1);
+
+
+            }
+        };
+        this.success = function () {
+            this.status = true;
+
+        };
+        this.fail = function () {
+            this.status = false;
+
+        };
+        
+    }
+    var mouse =new Mouse('Mickey', 1, 10);
+    mouse.alive();
+    mouse.check();
+    document.write('Chuột '+ '&nbsp' + mouse.name1 + '&nbsp' + "cân nặng" + '&nbsp' + mouse.weight1 + '&nbsp' + 'chạy với tốc độ' + '&nbsp' + mouse.speed1 + '&nbsp' + "kêu" + '&nbsp');
+    mouse.shout();
+    document.write("<br/>");
+
+    var cat = new Cat('Tom', 5, 20);
+    document.write('Mèo'+ '&nbsp'+ cat.name2 +'&nbsp'+ "cân nặng"+'&nbsp'+ cat.weight2 +'&nbsp'+ "chạy với tốc độ" + '&nbsp'+ cat.speed2 + '&nbsp' + "kêu"+'&nbsp');
+    cat.shout();
+    cat.success();
+    cat.catchMouse();
+    cat.eatMouse();
+    //cat.eatMouse();
+    document.write("<br/>");
+    document.write('Tom bắt được và ăn thịt Mickey khối lượng tăng' + '&nbsp' + cat.eatMouse() + '&nbsp' + "kg");
+
+
+    
+</script>
+</body>
+</html>
