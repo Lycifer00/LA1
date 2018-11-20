@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var Apple = function () {
+        this.getWeight1 = function (weight1 = 10) {
+            this.weight1 = weight1;
+
+        };
+        this.decreaseWeight1 = function () {
+            if (this.weight1 > 0){
+                this.weight1--;
+
+            }
+
+        };
+        this.isEmpty = function () {
+            if (this.weight1 <= 0){
+                alert("Can't eat!")
+            }
+            else {
+                alert("Can eat!")
+            }
+
+
+        }
+
+    };
+    var Human = function (name, gender, weight2) {
+        this.setName = function () {
+            this.name = name;
+
+        };
+        this.getName = function () {
+            return this.name;
+
+        };
+
+        this.setGender = function () {
+            this.gender = gender;
+
+        };
+        this.isMale = function () {
+
+           return this.gender;
+
+
+        };
+        this.say = function () {
+            var text = 'Hello';
+            console.log(text);
+
+        };
+        this.setWeight2 = function () {
+            this.weight2 = weight2;
+
+        };
+        this.getWeight2 = function () {
+            return this.weight2;
+
+        };
+
+        this.eat = function () {
+                this.weight2++;
+                this.weight1--;
+
+
+        };
+        this.checkApple = function () {
+            return this.isEmpty();
+            }
+
+
+    };
+    var apple = new Apple();
+    apple.getWeight1(10);
+    apple.decreaseWeight1();
+    apple.isEmpty();
+    var human = new Human('Adam', 'Male', 60);
+    human.setName();
+    document.write('Name: '+ human.getName(name) + '<br/>');
+    human.setGender();
+    human.isMale();
+    document.write('Gender: ' + human.isMale() + '<br/>');
+    human.say();
+    human.setWeight2(60);
+    human.getWeight2();
+    document.write('Weight: ' + human.getWeight2() + '<br/>');
+    human.checkApple();
+    human.eat();
+    document.write('Over!')
+
+</script>
+</body>
+</html>
