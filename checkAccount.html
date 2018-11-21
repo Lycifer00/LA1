@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    regex = /^[_a-z0-9]{6,}$/;
+    function is_Account(str) {
+        regexp = /^[_a-z0-9]{6,}$/;
+        if (regexp.test(str)) {
+            return('Account hợp lệ');
+        }
+        return('Account không hợp lệ');
+    }
+    console.log(is_Account("_lycifer2000"));
+    console.log(is_Account("_Lycifer.2000"));
+    console.log(is_Account("-lyCifeR2000."));
+
+</script>
+</body>
+</html>
