@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    regex = /^[P|C|A]+[0-9]{4}[G-M]$/;
+    function is_className(str) {
+        regexp = /^[P|C|A]+[0-9]{4}[G-M]$/;
+        if (regexp.test(str)) {
+            return('Tên hợp lệ');
+        }
+        return('Tên không hợp lệ');
+    }
+    console.log(is_className("C0318G"));
+    console.log(is_className("B0318-1235G"));
+</script>
+</body>
+</html>
