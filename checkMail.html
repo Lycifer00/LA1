@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    regex = /^[A-Za-z0-9]+[A-Za-z0-9]*@[A-Za-z0-9]+(\.[A-Za-z0-9]+)$/;
+    function is_Email(str) {
+        regexp = /^[A-Za-z0-9]+[A-Za-z0-9]*@[A-Za-z0-9]+(\.[A-Za-z0-9]+)$/;
+        if (regexp.test(str)) {
+            return('Email hợp lệ');
+        }
+        return('Email không hợp lệ');
+    }
+    var email = "lamanhb97@gmail.com";
+    console.log(is_Email(email));
+    email = "lamanh112ea.@gmail,com";
+    console.log(is_Email(email));
+</script>
+</body>
+</html>
